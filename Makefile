@@ -3,7 +3,7 @@ EXECUTABLES=$(SOURCES:.f90=)
 
 all: $(EXECUTABLES)
 
-$(EXECUTABLES):
+%: %.f90
 	gfortran -o $@ $@.f90
 
 clean:
@@ -12,4 +12,3 @@ clean:
 vars:
 	@echo 'sources: $(SOURCES)'
 	@echo 'executables: $(EXECUTABLES)'
-
